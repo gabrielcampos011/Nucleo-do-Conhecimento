@@ -1,0 +1,215 @@
+.trilhas {
+  position: relative;
+  padding: clamp(80px, 10vw, 140px) clamp(24px, 8vw, 140px);
+  background: var(--bg-secondary);
+  overflow: hidden;
+}
+
+.trilhas__container {
+  position: relative;
+  z-index: 2;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* ── Header ── */
+.trilhas__label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.trilhas__header {
+  margin-bottom: clamp(48px, 6vw, 72px);
+}
+
+.trilhas__title {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4vw, 52px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--white);
+  margin-top: 12px;
+}
+
+/* ── Tabs ── */
+.trilhas__tabs {
+  display: flex;
+  gap: 2px;
+  margin-bottom: clamp(32px, 4vw, 52px);
+  border-bottom: 1px solid var(--border);
+}
+
+.trilhas__tab {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 18px 32px 18px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: opacity 0.2s ease;
+  opacity: 0.45;
+}
+
+.trilhas__tab::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.trilhas__tab--active {
+  opacity: 1;
+}
+
+.trilhas__tab--active::after {
+  width: 100%;
+}
+
+.trilhas__tab-tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.trilhas__tab-name {
+  font-size: clamp(14px, 1.3vw, 17px);
+  font-weight: 700;
+  color: var(--white);
+  white-space: nowrap;
+}
+
+/* ── Panel ── */
+.trilhas__panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 100px);
+  animation: panelIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes panelIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Left ── */
+.trilhas__foco {
+  font-size: clamp(15px, 1.5vw, 18px);
+  font-weight: 300;
+  color: var(--off-white);
+  line-height: 1.75;
+  margin-bottom: clamp(32px, 4vw, 48px);
+  padding-left: 20px;
+  border-left: 3px solid var(--gold);
+}
+
+.trilhas__sub {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.trilhas__formatos ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.trilhas__formato-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--off-white);
+}
+
+.trilhas__dot {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+/* ── Right ── */
+.trilhas__temas {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.trilhas__tema {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s ease;
+  animation: temaIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--delay);
+}
+
+@keyframes temaIn {
+  from { opacity: 0; transform: translateX(16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.trilhas__tema:first-child { border-top: 1px solid var(--border); }
+
+.trilhas__tema:hover .trilhas__tema-num {
+  color: var(--gold);
+}
+
+.trilhas__tema-num {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+  min-width: 24px;
+}
+
+.trilhas__tema-name {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--white);
+}
+
+/* ── Sphere deco ── */
+.trilhas__sphere {
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: clamp(160px, 20vw, 280px);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .trilhas__panel {
+    grid-template-columns: 1fr;
+  }
+  .trilhas__sphere { display: none; }
+  .trilhas__tab { padding: 14px 20px 14px 0; }
+  .trilhas__tab-name { font-size: 13px; }
+}

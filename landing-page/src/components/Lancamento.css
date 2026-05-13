@@ -1,0 +1,105 @@
+.lancamento {
+  position: relative;
+  padding: clamp(80px, 10vw, 140px) clamp(24px, 8vw, 140px);
+  background: var(--bg-primary);
+  overflow: hidden;
+}
+
+.lancamento__container {
+  position: relative;
+  z-index: 2;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* ── Header ── */
+.lancamento__label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.lancamento__header {
+  max-width: 640px;
+  margin-bottom: clamp(48px, 6vw, 72px);
+}
+
+.lancamento__title {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4vw, 52px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--white);
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
+.lancamento__desc {
+  font-size: clamp(14px, 1.2vw, 16px);
+  font-weight: 300;
+  color: var(--off-white);
+  line-height: 1.75;
+}
+
+/* ── Video player ── */
+.lancamento__player {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6),
+              0 0 0 1px rgba(232, 160, 32, 0.06);
+}
+
+.lancamento__video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  background: var(--bg-card);
+}
+
+.lancamento__video-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(232, 160, 32, 0.04) 0%, transparent 70%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.lancamento__video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ── Decorative bars ── */
+.lancamento__bars {
+  position: absolute;
+  bottom: 24px;
+  left: clamp(16px, 4vw, 60px);
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  pointer-events: none;
+}
+
+.lancamento__bar {
+  display: block;
+  width: 3px;
+  height: calc(16px + var(--i) * 8px);
+  background: var(--gold);
+  border-radius: 2px;
+  opacity: calc(0.06 + var(--i) * 0.03);
+}
+
+@media (max-width: 768px) {
+  .lancamento__bars { display: none; }
+}

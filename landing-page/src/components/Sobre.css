@@ -1,0 +1,144 @@
+.sobre {
+  position: relative;
+  padding: clamp(80px, 10vw, 140px) clamp(24px, 8vw, 140px);
+  background: var(--bg-primary);
+  overflow: hidden;
+}
+
+.sobre__container {
+  position: relative;
+  z-index: 2;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* ── Header ── */
+.sobre__header {
+  max-width: 640px;
+  margin-bottom: clamp(56px, 7vw, 96px);
+}
+
+.sobre__label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.sobre__title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4.5vw, 58px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+.sobre__text {
+  font-size: clamp(15px, 1.3vw, 17px);
+  font-weight: 300;
+  color: var(--off-white);
+  line-height: 1.75;
+}
+
+.sobre__text strong {
+  font-weight: 900;
+  color: var(--gold);
+}
+
+/* ── Pilares cards ── */
+.sobre__pilares {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.sobre__card {
+  position: relative;
+  padding: clamp(36px, 4vw, 52px) clamp(28px, 3vw, 44px);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.sobre__card:hover {
+  border-color: rgba(232, 160, 32, 0.5);
+  transform: translateY(-4px);
+}
+
+.sobre__card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(232, 160, 32, 0.07) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.sobre__card-icon {
+  display: block;
+  font-size: 28px;
+  color: var(--gold);
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.sobre__card-title {
+  font-family: var(--font-body);
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 900;
+  color: var(--white);
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+
+.sobre__card-desc {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--off-white);
+  line-height: 1.75;
+}
+
+.sobre__card-line {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sobre__card:hover .sobre__card-line {
+  width: 100%;
+}
+
+/* ── Diagonal stripes deco (bottom-right) ── */
+.sobre__deco {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transform: rotate(-45deg);
+  pointer-events: none;
+}
+
+.sobre__stripe {
+  display: block;
+  height: 3px;
+  background: var(--gold);
+  border-radius: 2px;
+  width: calc(20px + var(--i) * 10px);
+  opacity: calc(0.12 + var(--i) * 0.05);
+}
+
+@media (max-width: 768px) {
+  .sobre__deco { display: none; }
+}
