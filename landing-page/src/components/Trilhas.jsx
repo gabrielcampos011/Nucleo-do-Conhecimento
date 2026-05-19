@@ -4,8 +4,7 @@ import './Trilhas.css';
 const trilhas = [
   {
     id: 'profissionais',
-    tag: 'Trilha A',
-    titulo: 'Trilha dos Profissionais',
+    titulo: 'Trilha Profissionais',
     foco: 'Contribuir para a formação e evolução dos profissionais como gestores de negócios cada vez mais rentáveis.',
     formatos: ['Palestras com grandes nomes', 'Workshops e imersões temáticas', 'Consultoria e coaching personalizados'],
     temas: [
@@ -18,7 +17,6 @@ const trilhas = [
   },
   {
     id: 'lojistas',
-    tag: 'Trilha B',
     titulo: 'Trilha Lojistas',
     foco: 'Garantir sustentabilidade, crescimento e equipes de alta performance.',
     formatos: ['Capacitações estratégicas', 'Encontros focados por público', 'Conteúdo aplicado ao varejo'],
@@ -42,8 +40,7 @@ export default function Trilhas() {
         <div className="trilhas__header reveal">
           <span className="trilhas__label spaced">As Trilhas</span>
           <h2 className="trilhas__title">
-            Conteúdo feito<br />
-            <span className="gold">para quem você é</span>
+            Conteúdo pensado para você e para seu negócio
           </h2>
         </div>
 
@@ -57,7 +54,6 @@ export default function Trilhas() {
               className={`trilhas__tab ${active === t.id ? 'trilhas__tab--active' : ''}`}
               onClick={() => setActive(t.id)}
             >
-              <span className="trilhas__tab-tag">{t.tag}</span>
               <span className="trilhas__tab-name">{t.titulo}</span>
             </button>
           ))}

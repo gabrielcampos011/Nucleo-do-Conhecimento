@@ -20,27 +20,29 @@ export default function PorQue() {
             o seu <span className="gold">Conhecimento</span>
           </h2>
           <div className="porque__bar reveal reveal-d2" aria-hidden="true" />
+        </div>
 
-          <div className="porque__networking reveal reveal-d3">
+        {/* Right — checklist + networking */}
+        <div className="porque__right">
+          <ul className="porque__list">
+            {motivos.map((m, i) => (
+              <li
+                key={i}
+                className={`porque__item reveal reveal-d${i + 1}`}
+              >
+                <span className="porque__check" aria-hidden="true">✓</span>
+                <span>{m}</span>
+              </li>
+            ))}
+          </ul>
+
+          <div className="porque__networking reveal reveal-d6">
             <span className="porque__networking-icon" aria-hidden="true">»»</span>
             <p>
               E <strong>MUUUITO NETWORKING</strong><br />para todo mundo!
             </p>
           </div>
         </div>
-
-        {/* Right — checklist */}
-        <ul className="porque__list">
-          {motivos.map((m, i) => (
-            <li
-              key={i}
-              className={`porque__item reveal reveal-d${i + 1}`}
-            >
-              <span className="porque__check" aria-hidden="true">✓</span>
-              <span>{m}</span>
-            </li>
-          ))}
-        </ul>
       </div>
 
       {/* Background number */}
