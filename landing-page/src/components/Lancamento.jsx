@@ -18,7 +18,6 @@ export default function Lancamento() {
 
         <div className="lancamento__player reveal reveal-d3">
           <div className="lancamento__video-wrapper">
-            {/* Placeholder — substituir pela URL real do YouTube */}
             <iframe
               src="https://www.youtube.com/embed/qgmgnxJFFhw?rel=0&modestbranding=1&color=white"
               title="Vídeo de Lançamento — Núcleo do Conhecimento"
@@ -27,6 +26,15 @@ export default function Lancamento() {
               allowFullScreen
             />
           </div>
+        </div>
+
+        <div className="lancamento__quote reveal reveal-d4">
+          <div className="lancamento__quote-line" aria-hidden="true" />
+          <blockquote className="lancamento__quote-text">
+            "Não é o mais forte que sobrevive, nem o mais inteligente,<br className="lancamento__quote-br" />
+            mas o que melhor se adapta às mudanças."
+          </blockquote>
+          <cite className="lancamento__quote-cite">— Adaptado de Charles Darwin</cite>
         </div>
       </div>
 

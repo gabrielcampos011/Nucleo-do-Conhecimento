@@ -76,7 +76,16 @@
   color: var(--white);
 }
 
-/* ── Right — list ── */
+/* ── Right — list + networking ── */
+.porque__right {
+  display: flex;
+  flex-direction: column;
+}
+
+.porque__networking {
+  margin-top: 24px;
+}
+
 .porque__list {
   display: flex;
   flex-direction: column;

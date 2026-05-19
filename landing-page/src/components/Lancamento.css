@@ -80,6 +80,43 @@
   border: none;
 }
 
+/* ── Quote ── */
+.lancamento__quote {
+  margin-top: clamp(48px, 6vw, 80px);
+  text-align: center;
+}
+
+.lancamento__quote-line {
+  width: 48px;
+  height: 2px;
+  background: var(--gold);
+  margin: 0 auto 28px;
+  opacity: 0.6;
+}
+
+.lancamento__quote-text {
+  font-family: var(--font-display);
+  font-size: clamp(18px, 2vw, 26px);
+  font-weight: 400;
+  color: var(--off-white);
+  line-height: 1.55;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.lancamento__quote-cite {
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-style: normal;
+}
+
+@media (max-width: 768px) {
+  .lancamento__quote-br { display: none; }
+}
+
 /* ── Decorative bars ── */
 .lancamento__bars {
   position: absolute;

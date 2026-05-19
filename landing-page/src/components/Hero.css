@@ -84,7 +84,7 @@
 }
 
 .hero__logo-main {
-  height: clamp(64px, 9vw, 110px);
+  height: clamp(80px, 12vw, 150px);
   width: auto;
   filter: brightness(0) invert(1);
 }
@@ -111,15 +111,15 @@
 }
 
 .hero__partner-logo {
-  height: 28px;
+  height: clamp(60px, 5vw, 80px);
   width: auto;
-  opacity: 0.75;
+  opacity: 0.9;
 }
 
 /* ── Title ── */
 .hero__title {
   font-family: var(--font-display);
-  font-size: clamp(36px, 5.5vw, 72px);
+  font-size: clamp(22px, 3vw, 42px);
   font-weight: 400;
   line-height: 1.08;
   letter-spacing: -0.01em;
@@ -225,4 +225,5 @@
   .hero__br  { display: none; }
   .hero__bars { right: 12px; height: 140px; }
   .hero__bar { width: 3px; height: calc(20px + var(--i) * 8px); }
+  .hero__partner-logo { height: 70px; }
 }

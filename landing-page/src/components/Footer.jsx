@@ -74,16 +74,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Quote */}
-      <div className="footer__quote">
-        <div className="footer__quote-line" aria-hidden="true" />
-        <blockquote className="footer__quote-text">
-          "Não é o mais forte que sobrevive, nem o mais inteligente,<br className="footer__quote-br" />
-          mas o que melhor se adapta às mudanças."
-        </blockquote>
-        <cite className="footer__quote-cite">— Adaptado de Charles Darwin</cite>
-      </div>
-
       {/* Bottom bar */}
       <div className="footer__bottom">
         <span>© {new Date().getFullYear()} Núcleo do Conhecimento · Todos os direitos reservados.</span>

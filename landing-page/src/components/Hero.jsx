@@ -53,9 +53,8 @@ export default function Hero() {
 
         {/* Realização — abaixo do CTA */}
         <div className="hero__partners reveal reveal-d4">
-          <span className="hero__partners-label">Realização</span>
           <div className="hero__partners-logos">
-            <img src="/assets/logo-sebrae-branca.png" alt="SEBRAE" className="hero__partner-logo" />
+            <img src="/assets/Logo-realizacao.png" alt="Realização" className="hero__partner-logo" />
           </div>
         </div>
       </div>

@@ -51,8 +51,8 @@
 
 /* ── Pilares cards ── */
 .sobre__pilares {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 24px;
 }
 
@@ -116,6 +116,83 @@
 
 .sobre__card:hover .sobre__card-line {
   width: 100%;
+}
+
+/* ── Carousel ── */
+.sobre__carousel {
+  margin-bottom: 28px;
+  border-radius: calc(var(--radius) - 4px);
+  overflow: hidden;
+}
+
+.sobre__carousel-track {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  background: var(--bg-primary);
+  border-radius: calc(var(--radius) - 4px);
+  overflow: hidden;
+}
+
+.sobre__carousel-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.sobre__carousel-slide--active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sobre__carousel-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 2px dashed rgba(232, 160, 32, 0.25);
+  border-radius: calc(var(--radius) - 4px);
+}
+
+.sobre__carousel-placeholder-icon {
+  font-size: 32px;
+  opacity: 0.25;
+}
+
+.sobre__carousel-placeholder-label {
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.sobre__carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.sobre__carousel-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: none;
+  background: var(--border);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.sobre__carousel-dot--active {
+  background: var(--gold);
+  transform: scale(1.3);
 }
 
 /* ── Diagonal stripes deco (bottom-right) ── */
