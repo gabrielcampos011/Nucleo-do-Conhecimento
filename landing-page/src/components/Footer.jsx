@@ -35,7 +35,7 @@ export default function Footer() {
       <div className="footer__main">
         <div className="footer__col footer__col--brand">
           <img
-            src="/assets/Logo-branca-nucleo-do-conhecimento.png"
+            src={`${import.meta.env.BASE_URL}assets/Logo-branca-nucleo-do-conhecimento.png`}
             alt="Núcleo do Conhecimento"
             className="footer__logo"
           />
@@ -44,7 +44,7 @@ export default function Footer() {
           </p>
           <div className="footer__realizacao">
             <span className="footer__realizacao-label">Realização</span>
-            <img src="/assets/logo-sebrae-branca.png" alt="SEBRAE" className="footer__sebrae" />
+            <img src={`${import.meta.env.BASE_URL}assets/logo-sebrae-branca.png`} alt="SEBRAE" className="footer__sebrae" />
           </div>
         </div>
 

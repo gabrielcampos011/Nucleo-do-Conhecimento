@@ -12,7 +12,7 @@ export default function Hero() {
 
       {/* Decorative hatched sphere bottom-left */}
       <img
-        src="/assets/flutuante amarelo.webp"
+        src={`${import.meta.env.BASE_URL}assets/flutuante amarelo.webp`}
         alt=""
         className="hero__sphere"
         aria-hidden="true"
@@ -20,7 +20,7 @@ export default function Hero() {
 
       {/* Decorative arc circle */}
       <img
-        src="/assets/arcos flutuantes.webp"
+        src={`${import.meta.env.BASE_URL}assets/arcos flutuantes.webp`}
         alt=""
         className="hero__arc"
         aria-hidden="true"
@@ -30,7 +30,7 @@ export default function Hero() {
         {/* Logo principal */}
         <div className="hero__logos reveal">
           <img
-            src="/assets/Logo-branca-nucleo-do-conhecimento.png"
+            src={`${import.meta.env.BASE_URL}assets/Logo-branca-nucleo-do-conhecimento.png`}
             alt="Núcleo do Conhecimento"
             className="hero__logo-main"
           />
@@ -54,7 +54,7 @@ export default function Hero() {
         {/* Realização — abaixo do CTA */}
         <div className="hero__partners reveal reveal-d4">
           <div className="hero__partners-logos">
-            <img src="/assets/Logo-realizacao.png" alt="Realização" className="hero__partner-logo" />
+            <img src={`${import.meta.env.BASE_URL}assets/Logo-realizacao.png`} alt="Realização" className="hero__partner-logo" />
           </div>
         </div>
       </div>

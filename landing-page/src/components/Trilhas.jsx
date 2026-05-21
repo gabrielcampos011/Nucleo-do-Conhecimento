@@ -93,7 +93,7 @@ export default function Trilhas() {
 
       {/* Decorative sphere */}
       <img
-        src="/assets/flutuante amarelo.webp"
+        src={`${import.meta.env.BASE_URL}assets/flutuante amarelo.webp`}
         alt=""
         className="trilhas__sphere"
         aria-hidden="true"
